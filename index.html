@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IP Paris Seminar Incentives and Computation</title>
+<meta name="description" content="A research seminar at Institut Polytechnique de Paris on incentives and computation: mechanism design, algorithmic game theory, market design and computational economics. First session Monday 12 October 2026.">
+<meta property="og:title" content="IP Paris Seminar Incentives and Computation">
+<meta property="og:description" content="A research seminar at Institut Polytechnique de Paris at the interface of economics and computer science. First session Monday 12 October 2026.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg:        #fbfaf8;
+    --surface:   #ffffff;
+    --text:      #1a1a1a;
+    --text-soft: #55524d;
+    --text-mute: #7a7671;
+    --rule:      #e2ded7;
+    --accent:    #8a2f2f;
+    --accent-bg: #fdf4f2;
+    --accent-br: #e6c3bd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #16151a;
+      --surface:   #1e1d23;
+      --text:      #ececef;
+      --text-soft: #b6b3ba;
+      --text-mute: #8c8993;
+      --rule:      #33313a;
+      --accent:    #e79a92;
+      --accent-bg: #2a2024;
+      --accent-br: #5c3c3c;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    padding: 0 1.5rem 5rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 820px; margin: 0 auto; }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  /* ---------- header ---------- */
+
+  header { padding: 4.5rem 0 2.75rem; border-bottom: 1px solid var(--rule); }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    margin: 1.1rem 0 0;
+    font-size: 1.1rem;
+    color: var(--text-soft);
+    max-width: 46ch;
+  }
+
+  .meta-line {
+    margin: 1.75rem 0 0;
+    font-size: 0.95rem;
+    color: var(--text-soft);
+  }
+
+  .meta-line strong { color: var(--text); font-weight: 600; }
+
+  /* ---------- sections ---------- */
+
+  section { padding: 3.25rem 0 0; }
+
+  h2 {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+  }
+
+  p { margin: 0 0 1.1rem; }
+  p:last-child { margin-bottom: 0; }
+
+  /* ---------- next session card ---------- */
+
+  .next {
+    margin-top: 2.75rem;
+    padding: 1.75rem 1.85rem;
+    background: var(--accent-bg);
+    border: 1px solid var(--accent-br);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px;
+  }
+
+  .next .label {
+    margin: 0 0 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .next .date {
+    margin: 0;
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .next dl {
+    margin: 1.25rem 0 0;
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.45rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .next dt {
+    color: var(--text-mute);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding-top: 0.15rem;
+  }
+
+  .next dd { margin: 0; color: var(--text); }
+
+  @media (max-width: 480px) {
+    .next dl { grid-template-columns: 1fr; gap: 0.15rem; }
+    .next dd { margin-bottom: 0.7rem; }
+  }
+
+  /* ---------- schedule table ---------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 34rem;
+  }
+
+  th {
+    text-align: left;
+    padding: 0.85rem 1.1rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mute);
+    border-bottom: 1px solid var(--rule);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 1rem 1.1rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  td.date { white-space: nowrap; font-weight: 600; }
+
+  .tba { color: var(--text-mute); font-style: italic; }
+
+  .note {
+    margin: 0.9rem 0 0;
+    font-size: 0.88rem;
+    color: var(--text-mute);
+  }
+
+  /* ---------- organizers ---------- */
+
+  ul.people { margin: 0; padding: 0; list-style: none; }
+
+  ul.people li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  ul.people li:last-child { border-bottom: none; }
+
+  ul.people .name { font-weight: 600; }
+
+  ul.people .affil { color: var(--text-soft); font-size: 0.93rem; }
+
+  .placeholder .name,
+  .placeholder .affil { color: var(--text-mute); font-style: italic; font-weight: 400; }
+
+  /* ---------- footer ---------- */
+
+  footer {
+    margin-top: 4.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.88rem;
+    color: var(--text-mute);
+  }
+
+  footer p { margin: 0 0 0.35rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Institut Polytechnique de Paris</p>
+    <h1>IP&nbsp;Paris Seminar<br>Incentives and Computation</h1>
+    <p class="tagline">A research seminar at the interface of economics and computer science.</p>
+    <p class="meta-line">Location: <strong>TBD</strong> &nbsp;·&nbsp; First session: <strong>Monday 12 October 2026</strong></p>
+  </header>
+
+  <!-- NEXT SESSION — update this card whenever the upcoming talk changes -->
+  <div class="next">
+    <p class="label">Next session</p>
+    <p class="date">Monday 12 October 2026</p>
+    <dl>
+      <dt>Speaker</dt>
+      <dd class="tba">To be announced</dd>
+      <dt>Title</dt>
+      <dd class="tba">To be announced</dd>
+      <dt>Location</dt>
+      <dd class="tba">TBD</dd>
+    </dl>
+  </div>
+
+  <section>
+    <h2>About the seminar</h2>
+    <p>
+      The seminar brings together researchers working where incentives meet computation. Talks span
+      mechanism design, algorithmic game theory, market design, computational social choice, and
+      computational economics more broadly — questions about how strategic agents behave in systems
+      that must also be computed, learned, or run at scale.
+    </p>
+    <p>
+      Sessions are open to faculty, postdocs and PhD students across Institut Polytechnique de Paris
+      and to colleagues from other institutions. Everyone is welcome; no registration is required.
+    </p>
+  </section>
+
+  <section>
+    <h2>Schedule</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Speaker</th>
+            <th scope="col">Affiliation</th>
+            <th scope="col">Title</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- SCHEDULE START — add new talks here, most recent date last -->
+          <tr>
+            <td class="date">12 October 2026</td>
+            <td class="tba">TBA</td>
+            <td class="tba">TBA</td>
+            <td class="tba">TBA</td>
+          </tr>
+          <!-- Template — copy this row for each new talk:
+          <tr>
+            <td class="date">9 November 2026</td>
+            <td>Speaker name</td>
+            <td>Affiliation</td>
+            <td>Talk title</td>
+          </tr>
+          -->
+        <!-- SCHEDULE END -->
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Further dates for the 2026–2027 series will be announced here.</p>
+  </section>
+
+  <section>
+    <h2>Organizers</h2>
+    <ul class="people">
+      <li>
+        <span class="name">Julien Prat</span><br>
+        <span class="affil">CREST, CNRS — Institut Polytechnique de Paris</span>
+      </li>
+      <!-- ORGANIZERS — replace the two placeholders below with the real names and affiliations -->
+      <li class="placeholder">
+        <span class="name">Co-organizer name</span><br>
+        <span class="affil">Affiliation</span>
+      </li>
+      <li class="placeholder">
+        <span class="name">Co-organizer name</span><br>
+        <span class="affil">Affiliation</span>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      To join the mailing list, propose a talk, or ask about a session, write to
+      <a href="mailto:julien.prat@polytechnique.edu">julien.prat@polytechnique.edu</a>.
+    </p>
+  </section>
+
+  <footer>
+    <p>IP Paris Seminar Incentives and Computation · Institut Polytechnique de Paris</p>
+    <p>Last updated 30 August 2026.</p>
+  </footer>
+
+</div>
+</body>
+</html>
