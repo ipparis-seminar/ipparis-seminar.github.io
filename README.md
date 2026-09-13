@@ -2,10 +2,20 @@
 
 Website for the seminar on incentives and computation at Institut Polytechnique de Paris.
 
-**Live site:** https://julprat.github.io/ip-paris-incentives-computation/
+**Live site:** https://ipparis-seminar.github.io/
 
-The whole site is one file, `index.html`, with the CSS inline. There is no build step: edit the
-file, commit, push, and GitHub Pages redeploys within a minute.
+The site is `index.html` with the CSS inline, plus two logo images. There is no build step: edit
+the file, commit, push, and GitHub Pages redeploys within a minute.
+
+| File | Used for |
+|---|---|
+| `index.html` | The whole page, CSS inline |
+| `ip-paris-logo.png` | IP Paris mark + wordmark, in the header |
+| `ip-paris-schools.png` | The five member schools, in the footer |
+
+Both images are cropped from the official IP Paris lockup and have a solid white background, so the
+page is deliberately light-only — there is no dark-mode stylesheet, and `color-scheme: light` is set
+on `:root`. If you ever add a dark mode, the logos need transparent or white-on-dark variants first.
 
 ## Adding a talk
 
@@ -20,9 +30,11 @@ file, commit, push, and GitHub Pages redeploys within a minute.
 
 | What | Where |
 |---|---|
-| Co-organizer names | `<!-- ORGANIZERS` marker — replace the two placeholder `<li>` blocks and remove `class="placeholder"` |
+| Co-organizer names | `<!-- ORGANIZERS` marker — replace the remaining placeholder `<li>` and remove `class="placeholder"`, or delete the `<li>` if there is no third organizer |
 | Location, once confirmed | Two places: the `meta-line` in the header and the Location row in the Next session card |
 | "Last updated" date | Bottom of the file, in `<footer>` |
+| Links | External links carry `target="_blank" rel="noopener"`; keep that on any new ones. The `mailto:` link deliberately does not. |
+| Logos | Replace `ip-paris-logo.png` / `ip-paris-schools.png`, keeping the `width`/`height` attributes on the `<img>` tags in sync |
 
 ## Local preview
 
