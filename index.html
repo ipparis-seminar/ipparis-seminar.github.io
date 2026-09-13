@@ -106,6 +106,20 @@
     color: var(--text);
   }
   .cal a { font-weight: 600; }
+  .next-body { display: flex; gap: 1.6rem; align-items: flex-start; }
+  .next-text { flex: 1 1 auto; min-width: 0; }
+  .next-photo {
+    flex: 0 0 auto;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--accent-br);
+  }
+  @media (max-width: 560px) {
+    .next-body { flex-direction: column-reverse; align-items: center; }
+    .next-text { width: 100%; }
+  }
   .next {
     margin-top: 2.75rem;
     padding: 1.75rem 1.85rem;
@@ -253,6 +267,8 @@
   <!-- NEXT SESSION — update this card whenever the upcoming talk changes -->
   <div class="next">
     <p class="label">Next session</p>
+    <div class="next-body">
+    <div class="next-text">
     <p class="date">Monday 12 October 2026</p>
     <dl>
       <dt>Speaker</dt>
@@ -264,6 +280,10 @@
       <dt>Location</dt>
       <dd><a href="https://maps.app.goo.gl/bhmTny4q9wenYVgx5" target="_blank" rel="noopener">BEM</a>, Room 2011</dd>
     </dl>
+    </div>
+    <img class="next-photo" src="hartline.png" width="250" height="250"
+         alt="Jason Hartline">
+    </div>
     <p class="cal">Add to calendar:
       <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Incentives+and+Computation%3A+Jason+Hartline+%28Northwestern%29&amp;dates=20261012T120000Z%2F20261012T131500Z&amp;location=BEM%2C+Room+2011%2C+Institut+Polytechnique+de+Paris&amp;details=Jason+Hartline+%28Northwestern+University%29%0A%22Scoring+rules+and+foundations+of+AI%22%0A%0AIP+Paris+Seminar+on+Incentives+and+Computation%0Ahttps%3A%2F%2Fipparis-seminar.github.io%2F"
          target="_blank" rel="noopener">Google</a>
