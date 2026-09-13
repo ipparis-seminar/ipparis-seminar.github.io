@@ -30,7 +30,7 @@ on `:root`. If you ever add a dark mode, the logos need transparent or white-on-
 
 | What | Where |
 |---|---|
-| Co-organizer names | `<!-- ORGANIZERS` marker — replace the remaining placeholder `<li>` and remove `class="placeholder"`, or delete the `<li>` if there is no third organizer |
+| Co-organizer names | `<!-- ORGANIZERS` marker — uncomment the commented-out `<li>` template and fill it in |
 | Location, once confirmed | Two places: the `meta-line` in the header and the Location row in the Next session card |
 | "Last updated" date | Bottom of the file, in `<footer>` |
 | Links | External links carry `target="_blank" rel="noopener"`; keep that on any new ones. The `mailto:` link deliberately does not. |
