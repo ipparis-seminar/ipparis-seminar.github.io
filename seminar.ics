@@ -1,0 +1,35 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//IP Paris Seminar//Incentives and Computation//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:IP Paris Seminar — Incentives and Computation
+X-WR-CALDESC:Monthly seminar at the interface of economics and computer scien
+ ce\, Institut Polytechnique de Paris.
+X-WR-TIMEZONE:Europe/Paris
+REFRESH-INTERVAL;VALUE=DURATION:PT12H
+X-PUBLISHED-TTL:PT12H
+BEGIN:VEVENT
+UID:2026-10-12-hartline@ipparis-seminar.github.io
+DTSTAMP:20260913T120000Z
+DTSTART:20261012T120000Z
+DTEND:20261012T131500Z
+SUMMARY:Incentives and Computation: Jason Hartline (Northwestern)
+DESCRIPTION:Jason Hartline (Northwestern University)\n"Scoring rules and foun
+ dations of AI"\n\nOpen to all\; no registration required.\n\nhttps://ipparis-
+ seminar.github.io/
+LOCATION:BEM\, Room 2011\, Institut Polytechnique de Paris
+URL:https://ipparis-seminar.github.io/
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-16-tba@ipparis-seminar.github.io
+DTSTAMP:20260913T120000Z
+DTSTART:20261116T130000Z
+DTEND:20261116T141500Z
+SUMMARY:Incentives and Computation: speaker to be announced
+DESCRIPTION:Speaker and title to be announced.\n\nhttps://ipparis-seminar.git
+ hub.io/
+LOCATION:BEM\, Room 2011\, Institut Polytechnique de Paris
+URL:https://ipparis-seminar.github.io/
+END:VEVENT
+END:VCALENDAR
