@@ -164,6 +164,7 @@
   }
 
   .next dd { margin: 0; color: var(--text); }
+  .next dd.abstract { color: var(--text-soft); font-size: 0.9rem; line-height: 1.55; text-align: justify; hyphens: auto; }
 
   @media (max-width: 480px) {
     .next dl { grid-template-columns: 1fr; gap: 0.15rem; }
@@ -275,6 +276,8 @@
       <dd><a href="https://sites.northwestern.edu/hartline/" target="_blank" rel="noopener">Jason Hartline</a> (Northwestern University)</dd>
       <dt>Title</dt>
       <dd>Scoring rules and foundations of AI</dd>
+      <dt>Abstract</dt>
+      <dd class="abstract">Scoring rules are foundational in decision theory and, therefore, are foundational for a developing theory of artificial intelligence. Just as simple models from decision theory provide context for understanding the decisions of complex humans, so too can they for complex AI systems. Bayesian decision theory considers an agent receiving a signal that is correlated with the state, choosing an action, and obtaining a payoff that depends on both the state and action. With Bayesian updating and the revelation principle, the signal becomes a posterior belief and the decision problem becomes a scoring rule. Given a scoring rule, baseline performance is the optimal score under the prior; benchmark performance is the optimal score under the posterior; and the optimal scoring rule &mdash; framed as a mechanism design problem &mdash; maximizes the difference between them. The talk reviews this theory and applies it to (a)&nbsp;evaluate prediction as a service, (b)&nbsp;behavioral experiments on human-AI decision making, (c)&nbsp;develop proper scoring rules for text (e.g. for training language models to hallucinate less).</dd>
       <dt>Time</dt>
       <dd>2:00&ndash;3:15&nbsp;pm</dd>
       <dt>Location</dt>
