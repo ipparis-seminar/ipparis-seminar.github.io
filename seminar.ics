@@ -11,9 +11,9 @@ REFRESH-INTERVAL;VALUE=DURATION:PT12H
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:2026-10-12-hartline@ipparis-seminar.github.io
-DTSTAMP:20260913T120000Z
+DTSTAMP:20261007T120000Z
 DTSTART:20261012T120000Z
-DTEND:20261012T131500Z
+DTEND:20261012T130000Z
 SUMMARY:Incentives and Computation: Jason Hartline (Northwestern)
 DESCRIPTION:Jason Hartline (Northwestern University)\n"Scoring rules and foun
  dations of AI"\n\nOpen to all\; no registration required.\n\nhttps://ipparis-
@@ -23,9 +23,9 @@ URL:https://ipparis-seminar.github.io/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-16-tba@ipparis-seminar.github.io
-DTSTAMP:20260913T120000Z
+DTSTAMP:20261007T120000Z
 DTSTART:20261116T130000Z
-DTEND:20261116T141500Z
+DTEND:20261116T140000Z
 SUMMARY:Incentives and Computation: speaker to be announced
 DESCRIPTION:Speaker and title to be announced.\n\nhttps://ipparis-seminar.git
  hub.io/
