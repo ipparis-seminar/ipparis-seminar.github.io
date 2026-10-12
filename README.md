@@ -13,7 +13,6 @@ the file, commit, push, and GitHub Pages redeploys within a minute.
 | `ip-paris-logo.png` | IP Paris mark + wordmark, in the header |
 | `ip-paris-schools.png` | The five member schools, in the footer |
 | `seminar.ics` | Subscribable calendar feed — every session, one file |
-| `seminar-2026-10-12.ics` | Single-session download for the October talk |
 | `seminar-2026-11-16.ics` | Single-session download for the November talk |
 
 Both images are cropped from the official IP Paris lockup and have a solid white background, so the
@@ -57,6 +56,7 @@ last-minute changes — email those.
 | What | Where |
 |---|---|
 | Co-organizer names | `<!-- ORGANIZERS` marker — uncomment the commented-out `<li>` template and fill it in |
+| Next session date | Three places besides the card: the `meta-line` in the header and the two `description` meta tags in `<head>` |
 | Location, once confirmed | Two places: the `meta-line` in the header and the Location row in the Next session card |
 | "Last updated" date | Bottom of the file, in `<footer>` |
 | Links | External links carry `target="_blank" rel="noopener"`; keep that on any new ones. The `mailto:` link deliberately does not. |
