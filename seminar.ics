@@ -23,12 +23,13 @@ URL:https://ipparis-seminar.github.io/
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-16-tba@ipparis-seminar.github.io
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261012T120000Z
 DTSTART:20261116T130000Z
 DTEND:20261116T140000Z
-SUMMARY:Incentives and Computation: speaker to be announced
-DESCRIPTION:Speaker and title to be announced.\n\nhttps://ipparis-seminar.git
- hub.io/
+SUMMARY:Incentives and Computation: Alessandro Pavan (Northwestern)
+DESCRIPTION:Alessandro Pavan (Northwestern University)\n"Engagement Design"\
+ n\nOpen to all\; no registration required.\n\nhttps://ipparis-seminar.githu
+ b.io/
 LOCATION:BEM\, Room 2011\, Institut Polytechnique de Paris
 URL:https://ipparis-seminar.github.io/
 END:VEVENT

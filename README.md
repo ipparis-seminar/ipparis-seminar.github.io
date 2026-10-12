@@ -14,6 +14,7 @@ the file, commit, push, and GitHub Pages redeploys within a minute.
 | `ip-paris-schools.png` | The five member schools, in the footer |
 | `seminar.ics` | Subscribable calendar feed — every session, one file |
 | `seminar-2026-10-12.ics` | Single-session download for the October talk |
+| `seminar-2026-11-16.ics` | Single-session download for the November talk |
 
 Both images are cropped from the official IP Paris lockup and have a solid white background, so the
 page is deliberately light-only — there is no dark-mode stylesheet, and `color-scheme: light` is set
